@@ -1,21 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule}  from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FlightTripComponent } from './flight-trip/flight-trip.component';
-import { StoreModule } from '@ngrx/store';
+import { FlightTripComponent } from './component/flight-trip/flight-trip.component';
+import { FlightsComponent } from './component/flights/flights.component';
 import { FormsModule } from '@angular/forms';
+import { AuthenticateComponent } from './component/authenticate/authenticate.component';
+import { CustomerRegisterComponent } from './component/customer-register/customer-register.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    FlightTripComponent
+    FlightTripComponent,
+    FlightsComponent,
+    AuthenticateComponent,
+    CustomerRegisterComponent
+
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    StoreModule.forRoot({}, {})
+    AppRoutingModule,HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
