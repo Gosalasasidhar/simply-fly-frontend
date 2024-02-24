@@ -1,0 +1,22 @@
+<h2>Airlines</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Id</th>
+      <th scope="col">Airline Name</th>
+      <th scope="col">Modify</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let airline of airlinesList; let i = index">
+      <td>{{i}}</td>
+      <td>{{ airline.id }}</td>
+      <td>{{ airline.name }}</td>
+      <td><button type="button" class="btn btn-info">Modify</button></td>
+      <td><button type="button" class="btn btn-danger">Danger</button></td>
+    </tr>
+  </tbody>
+</table>

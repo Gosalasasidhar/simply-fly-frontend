@@ -1,0 +1,24 @@
+.logo {
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: bold;
+  background: linear-gradient(90deg, 
+  #03001e,
+  #7303c0,
+  #ec38bc);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: absolute;
+  top: 0;
+}
+.user{
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 10px 10px;
+  font-weight: bold;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}

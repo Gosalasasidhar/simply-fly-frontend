@@ -1,0 +1,24 @@
+<h2>Airports</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">IATACode</th>
+      <th scope="col">Airport Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Modify</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let airport of airportList; let i = index">
+      <td>i</td>
+      <td>{{ airport.code }}</td>
+      <td>{{ airport.name }}</td>
+      <td>{{ airport.location }}</td>
+      <td><button type="button" class="btn btn-info">Modify</button></td>
+      <td><button type="button" class="btn btn-danger">Danger</button></td>
+    </tr>
+  </tbody>
+</table>
