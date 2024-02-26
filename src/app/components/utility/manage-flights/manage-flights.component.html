@@ -1,0 +1,39 @@
+<h2>Flights for</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">FlightCode</th>
+      <th scope="col">Check-in Weight</th>
+      <th scope="col">Cabin Weight</th>
+      <th scope="col">Total Seats</th>
+      <th scope="col">Airline Id</th>
+      <th scope="col">Modify</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Bookings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let flight of flightsList; let i = index">
+      <td>{{ i }}</td>
+      <td>{{ flight.flightCode }}</td>
+      <td>{{ flight.checkInWeight }}</td>
+      <td>{{ flight.cabinWeight }}</td>
+      <td>{{ flight.totalSeats }}</td>
+      <td>{{ flight.airlineId }}</td>
+      <td><button type="button" class="btn btn-info">Modify</button></td>
+      <td><button type="button" class="btn btn-danger">Danger</button></td>
+      <!-- Inside the template where you navigate to ManageFlightTripsComponent -->
+      <td>
+        <button
+          type="button"
+          class="btn btn-info"
+          [routerLink]="['/flight-trip', flight.flightCode]"
+        >
+          View All Flights
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

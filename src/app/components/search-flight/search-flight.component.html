@@ -1,0 +1,53 @@
+<button style="position: absolute; top: 0; right: 30px;" routerLink="/login">Login</button>
+<button style="position: absolute; top: 0; right: 100px;" routerLink="/signup">signup</button>
+<form #formData="ngForm" (ngSubmit)="searchFlight(formData.value)">
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" name="source" placeholder="From" required ngModel>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" name="destination" placeholder="To" required ngModel>
+    </div>
+    <div class="col">
+      <input type="date" class="form-control" name="date" required ngModel>
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary" [disabled]="formData.invalid">Search</button>
+    </div>
+  </div>
+</form>
+<style>
+  table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+  </style>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>FlightTripId</th>
+        <th>ARRIVAL</th>
+        <th>DEPARTURE</th>
+        <th>TICKET PRICE</th>
+        <th>STATUS</th>
+        <th>FILLED SEATS</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flightTrip of flightList; let i=index">
+        <td>{{flightTrip.flightTripId}}</td>
+        <td>{{ flightTrip.arrival }}</td>
+        <td>{{ flightTrip.departure }}</td>
+        <td>{{ flightTrip.ticketPrice }}</td>
+        <td>{{ flightTrip.status }}</td>
+        <td>{{ flightTrip.filledSeats }}</td>
+        
+
+      </tr>
+
+
+    </tbody>
+  </table>
+</div> 
